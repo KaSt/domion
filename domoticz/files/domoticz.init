@@ -1,0 +1,18 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2012 OpenWrt.org
+# This is free software, licensed under the GNU General Public License v2.
+# See /LICENSE for more information.
+#
+
+START=81
+
+start() {
+	mkdir -p /etc/domoticz
+	cp /opt/domoticz/domoticz.db* /etc/domoticz/
+	service_start /opt/domoticz/domoticz -www 8080 -wwwroot /opt/domoticz/www -dbase /etc/domoticz/domoticz.db -startupdelay 5 -daemon
+}
+
+stop() {
+	service_stop /opt/domoticz/domoticz
+	cp /etc/domoticz/domoticz.db* /opt/domoticz
+}

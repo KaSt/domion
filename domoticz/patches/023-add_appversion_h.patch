@@ -1,0 +1,9 @@
+Index: domoticz/appversion.h
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ domoticz/appversion.h	2015-11-21 22:33:30.743467153 +0200
+@@ -0,0 +1,4 @@
++#define APPVERSION 0.3827
++#define APPHASH "9e952d7"
++#define APPDATE 1450287266
++
