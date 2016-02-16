@@ -22,7 +22,7 @@ PKG_SOURCE_VERSION:=8c1073f017a6dc82dc6a07f0d46ffb4c597508f5
 include $(INCLUDE_DIR)/package.mk
 
 define Package/openzwave
-  SECTION:=kai
+  SECTION:=ka
   CATEGORY:=Domion
   TITLE:=Open ZWave Library.
   URL:=http://openzwave.com
