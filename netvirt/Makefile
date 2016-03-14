@@ -43,7 +43,8 @@ endef
 
 CMAKE_OPTIONS += \
 	-DCMAKE_BUILD_TYPE=Release . \
-	-DCPACK_STRIP_FILES=1
+	-DCPACK_STRIP_FILES=1 \
+	-DWITH_GUI=OFF
 #	-DDEBUG=1
 
                         
