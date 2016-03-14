@@ -1,0 +1,3 @@
+[submodule "netvirt"]
+	path = netvirt
+	url = https://github.com/netvirt/netvirt.git
