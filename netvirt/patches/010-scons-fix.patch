@@ -1,0 +1,30 @@
+--- a/tapcfg/SConstruct
++++ b/tapcfg/SConstruct
+@@ -1,4 +1,18 @@
+ 
++import os
++
++env_options = {
++    "CC"    : "mips-openwrt-linux-uclibc-gcc",
++    "CXX"   : "mips-openwrt-linux-uclibc-g++",
++    "LD"    : "mips-openwrt-linux-uclibc-g++",
++    "AR"    : "mips-openwrt-linux-uclibc-ar",
++    "STRIP" : "mips-openwrt-linux-uclibc-strip",
++}
++
++env = Environment(**env_options)
++env.Append(ENV = {'PATH' : os.environ['PATH']})
++Export('env')
++
+ AddOption('--force-mingw32',
+           action='store_true', dest='mingw32', default=False,
+           help='Cross compile using MinGW for Windows')
+@@ -20,7 +34,7 @@ AddOption('--build-universal',
+           help='Create Mac 32-bit and 64-bit universal binaries')
+ 
+ VariantDir('build', 'src')
+-env = Environment()
++#env = Environment()
+ env.Tool('gmcs', toolpath = ['scons-tools'])
+ 
+ if env['PLATFORM'] == 'win32' or GetOption('mingw32') or GetOption('mingw64'):
