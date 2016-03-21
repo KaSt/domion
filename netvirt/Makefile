@@ -85,12 +85,7 @@ endef
 
 define Package/netvirt/install
 	$(INSTALL_DIR) $(1)/usr/bin
-#	$(INSTALL_DIR) $(1)/usr/lib
 	$(CP) $(PKG_BUILD_DIR)/nvagent/src/netvirt-agent $(1)/usr/bin/netvirt-agent 
-#	$(CP) $(PKG_BUILD_DIR)/udt4/src/libudt.a $(1)/usr/lib/libudt.a
-#	$(CP) $(PKG_BUILD_DIR)/udt4/src/libudt.so $(1)/usr/lib/libudt.so
-#	$(CP) $(PKG_BUILD_DIR)/tapcfg/build/libtapcfg.a $(1)/usr/lib/libtapcfg.a
-#	$(CP) $(PKG_BUILD_DIR)/tapcfg/release/libtapcfg32.so $(1)/usr/lib/libtapcfg32.so
 endef
 
 CMAKE_OPTIONS += \
