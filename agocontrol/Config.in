@@ -1,0 +1,3 @@
+config AGOCONTROL_OZW_SUPPORT
+	bool "OpenZWave support"
+	default n
